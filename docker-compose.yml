@@ -1,0 +1,11 @@
+version: '3'
+services:
+  sensor:
+    build: .
+    container_name: 'sensor'
+    working_dir: '/root/'
+    tty: true
+    volumes:
+      - ./python:/root/python
+    env_file:
+      - app.env
